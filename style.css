@@ -1,0 +1,19 @@
+
+
+body{
+    background-color: brown;
+
+}
+
+h1{
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blue;
+    line-height: normal;
+
+}
+
+p{
+    font-size: small;
+    color: chartreuse;
+}
