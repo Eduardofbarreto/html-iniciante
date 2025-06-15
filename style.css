@@ -1,15 +1,16 @@
-/*
-p{
-    font-size: 50px;
+
+.container{
     color: blue;
 }
-*/
 
-div{
-    color: red;
+.container h3{
+    color: orange;
 }
 
-.texto{
-    color: brown;
-    font-size: 25px;
+.bordas{
+    color: blueviolet;
+    columns: 2;
+    border: 1px solid;
+    padding: 8px;
+    text-align: center;
 }
