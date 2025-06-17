@@ -33,3 +33,7 @@ h1{
     border-radius: 4px;
     font-size: 1em;
 }
+
+.other-form label{
+    text-align: center;
+}
