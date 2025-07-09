@@ -1,42 +1,26 @@
-<<<<<<< HEAD
-=======
 body{
-    background-color: rgb(250, 243, 231);
-}
-
-.paragrafos p{
-    color: aqua;
-}
-
-p{
-    color: brown;
+    background-color: powderblue;
 }
 
 h1{
-    color: chartreuse;
+    color: yellow;
+    border: 3px solid white;
+    background-color: black;
 }
 
-.form{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: violet;
+    border: 2px solid black;
 }
 
-.form label{
-    flex: 0 0 120px;
-    text-align: right;
-    font-weight: bold;
+.azul{
+    background-color: blue;
+    border: 3px solid white;
+    color: yellow;
 }
 
-.form input {
-    flex: 1; 
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1em;
+a{
+    color: teal;
+    font-size: x-large;
 }
-
-.other-form label{
-    text-align: center;
-}
->>>>>>> refs/remotes/origin/master
