@@ -1,32 +1,30 @@
-p{
-    
+.city, city2{
+    margin 10px;
+    padding 10px;
+    background-color: tomato;
+    border: 2px solid black;
+    color: white;
+    width: 300px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: tan;
+.colunas{
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-h1{
-    color: blue;
-}
-
-h2{
-    color: turquoise;
-}
-
-p{
-    
-}
-
-table{
-    border: 5px solid black;
-    border-spacing: 4px;
-    
-}
-
-th, td{
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 5px;
-    padding-right: 5px;
+.esquerda, direita{
+    display:flex;
+    flex-direction: ;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 350px;
 }
