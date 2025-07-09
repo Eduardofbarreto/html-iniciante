@@ -1,26 +1,23 @@
+p{
+    
+}
+
 body{
-    background-color: powderblue;
+    background-color: tan;
 }
 
 h1{
-    color: yellow;
-    border: 3px solid white;
-    background-color: black;
+    color: blue;
+}
+
+h2{
+    color: turquoise;
 }
 
 p{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: violet;
-    border: 2px solid black;
+    
 }
 
-.azul{
-    background-color: blue;
-    border: 3px solid white;
-    color: yellow;
-}
-
-a{
-    color: teal;
-    font-size: x-large;
+table{
+    border: 5px solid black;
 }

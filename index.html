@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="imagens/proxy-image.ico">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,12 +11,20 @@
 
 
     <h1>Bem-vindos ao meu site!</h1>
+    <table>
+        <tr>
+            <th><label for="text">Nome:</label></th>
+            <th><label for="date">Data de nascimento:</label></th>
+            <th><label for="text">Cpf:</label></th>
+        </tr>
     
-    <h2>URL'S abolutas</h2>
-    <p><a href="https://www.google.com.br" target="_blank">GOOGLE</a></p>
-    <p><a href="https://www.terra.com.br" target="_blank">TERRA</a></p>
+        <tr>
+            <th><input type="text" id="nome" name="nome" placeholder="Digite seu nome: "></th>
+            <th><input type="date" id="data" name="data"></th>
+            <th><input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF:"></th>
+        </tr>
 
-    <p><a href="https://www.amazon.com.br"><img src="imagens/Amazon-Logo-1.png" alt="amazon_logo" width="50"></a></p>
+    </table>        
 
 </body>
 </html>
