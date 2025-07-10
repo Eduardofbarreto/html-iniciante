@@ -9,34 +9,41 @@
 </head>
 <body>
 
-    <h1>TEste</h1>
-        
-        <div class="form">
-            <label for="nome">Nome: </label><br>
-            <input type="text" id="nome" name="nome" placeholder="Nome: ">
-        </div>
-        <div class="form">
-            <label for="sobrenome">Sobrenome: </label><br>
-            <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome: ">
-        </div>
-        <div class="form">
-            <label for="data">Data de nascimento: </label><br>
-            <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de nsacimento: ">
-        </div>
-        <div class="form">
-            <label for="endereco">Endereço: </label><br>
-            <input type="text" id="endereco" name="endereco" placeholder="Endereço: ">
-        </div>
-        <div class="form">
-            <label for="numero">Número: </label><br>
-            <input type="text" id="numero" name="numero" placeholder="Número: ">
-        </div>
-        <div class="form">
-            <label for="password">Password: </label><br>
-            <input type="password" id="password" name="password" placeholder="Password: ">
-        </div>
+<div class="form">
+    <label for="numsorte">Escolha um número: </label><br>
+    <input type="number" id="numSorte" name="numSorte" placeholder="Digite o número certo: ">
+    <button onclick="verificarNumero()">Verificar</button>
+</div>
 
+<p id="resultado"></p>
 
+<script>
+    function verificarNumero(){
+        const inputNumSorte = document.getElementById("numSorte");
+
+        let numSorte = inputNumSorte.value;
+
+        numSorte = +numSorte;
+
+        const resultadoParagrafo = document.getElementById("resultado");
+
+        if(numSorte <= 3){
+            resultadoParagrafo.textContent = "O número é menor ou igual que 3!";
+            resultadoParagrafo.style.color = "green";
+            resultadoParagrafo.style.border = "2px solid black";
+        }else if(numSorte > 3 && numSorte <= 7){
+            resultadoParagrafo.textContent = "O número está entre 4 e 7!";
+            resultadoParagrafo.style.color = "pink";
+            resultadoParagrafo.style.backgroundColor = "black";
+        }else{
+            resultadoParagrafo.textContent = "O número é maior que 7!";
+            resultadoParagrafo.style.color = "red";
+            resultadoParagrafo.style.backgroundColor = "white";
+        }
+
+        inputNumSorte.value = "";
+    }
+</script>
 
 </body>
 </html>
