@@ -9,38 +9,26 @@
 </head>
 <body>
 
-    <p id="demo">Alguma frase aleatória!</p>    
+    <h1>TEste</h1>
+        
+        <div class="form">
+            <label for="nome">Nome: </label><br>
+            <input type="text" id="nome" name="nome" placeholder="Nome: ">
+        </div>
+        <div class="form">
+            <label for="sobrenome">Sobrenome: </label><br>
+            <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome: ">
+        </div>
+        <div class="form">
+            <label for="data">Data de nascimento: </label><br>
+            <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de nsacimento: ">
+        </div>
+        <div class="form">
+            <label for="endereco">Endereço: </label><br>
+            <input type="text" id="endereco" name="endereco" placeholder="Endereço: ">
+        </div>
 
-    <button type="button" onclick="myFunction()">Clique aqui!</button><br>
-    <button type="button" onclick="otherFunction()">Clique também!</button><br>
-    <button type="button" onclick="anotherFunction()">Também Clique!</button>
 
-    <script>
-        function myFunction(){
-            const demoElement = document.getElementById("demo");
-            demoElement.style.fontSize = "12px";
-            demoElement.style.color = "#f45a54";
-            demoElement.style.backgroundColor = "#fff231";
-            demoElement.style.border = "2px solid black";
-            demoElement.style.width = "120px";
-        }
-        function otherFunction(){
-            const demoElement = document.getElementById("demo");
-            demoElement.style.fontSize = "40px";
-            demoElement.style.color = "white";
-            demoElement.style.backgroundColor = "black";
-            demoElement.style.border = "2px solid yellow";
-            demoElement.style.width = "400px";
-        }
-        function anotherFunction(){
-            const demoElement = document.getElementById("demo");
-            demoElement.style.fontSize = "35px";
-            demoElement.style.color = "#a432ed";
-            demoElement.style.backgroundColor = "rgb(255,150,150)";
-            demoElement.style.border = "3px solid rgb(123, 100, 100)";
-            demoElement.style.width = "350px";
-        }
-    </script>
 
 </body>
 </html>
