@@ -5,45 +5,46 @@
     <link rel="icon" href="imagens/proxy-image.ico">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Somador de Números</title> </head>
 <body>
 
-<div class="form">
-    <label for="numsorte">Escolha um número: </label><br>
-    <input type="number" id="numSorte" name="numSorte" placeholder="Digite o número certo: ">
-    <button onclick="verificarNumero()">Verificar</button>
-</div>
+<h2>Somar dois números!</h2>
 
-<p id="resultado"></p>
+    <div class="input-group">
+        <label for="num1">Número 1: </label>
+        <input type="number" id="num1" placeholder="Digite o primeiro número: ">
+    </div>
 
-<script>
-    function verificarNumero(){
-        const inputNumSorte = document.getElementById("numSorte");
+    <div class="input-group">
+        <label for="num2">Número 2: </label>
+        <input type="number" id="num2" placeholder="Digite o segundo número: ">
+    </div>
 
-        let numSorte = inputNumSorte.value;
+    <button onclick="somarNumeros()">Somar</button>
 
-        numSorte = +numSorte;
+    <h3>Resultado: <span id="resultado"></span></h3>
 
-        const resultadoParagrafo = document.getElementById("resultado");
+    <script>
+        function somarNumeros(){
+            const inputNumero1 = document.getElementById("num1");
+            const numero1 = parseFloat(inputNumero1.value);
 
-        if(numSorte <= 3){
-            resultadoParagrafo.textContent = "O número é menor ou igual que 3!";
-            resultadoParagrafo.style.color = "green";
-            resultadoParagrafo.style.border = "2px solid black";
-        }else if(numSorte > 3 && numSorte <= 7){
-            resultadoParagrafo.textContent = "O número está entre 4 e 7!";
-            resultadoParagrafo.style.color = "pink";
-            resultadoParagrafo.style.backgroundColor = "black";
-        }else{
-            resultadoParagrafo.textContent = "O número é maior que 7!";
-            resultadoParagrafo.style.color = "red";
-            resultadoParagrafo.style.backgroundColor = "white";
+            const inputNumero2 = document.getElementById("num2");
+            const numero2 = parseFloat(inputNumero2.value);
+
+            // Adicione esta linha para pegar o elemento do resultado
+            const spanResultado = document.getElementById("resultado");
+
+            if(isNaN(numero1) || isNaN(numero2)){
+                spanResultado.textContent = "Por favor, digite números válidos!";
+                spanResultado.style.color = "red";
+            } else {
+                const soma = numero1 + numero2;
+                spanResultado.textContent = soma;
+                spanResultado.style.color = "green";
+            }
         }
-
-        inputNumSorte.value = "";
-    }
-</script>
+    </script>
 
 </body>
 </html>
