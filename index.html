@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagens/icone.ico">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Fazendo alguns testes!!</title>
 </head>
 <body>
+    <h2>Layout com CSS</h2>
+    <p>Nesse exemplo estou criando um cabeçalho. Duas colunas/caixas e um rodapé.</p>
+    <p>Estou tentando fazer algo responsivo com a janela do navegador.</p>
 
+    <header>
+        <h2>Cities</h2>
+    </header>
 
-    <h1>Bem-vindos ao meu site!</h1>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Londres</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+            </ul>
+        </nav>
 
-        <p id="demo">JavaScript can chance the style of an HTML element.</p>
+        <article>
+            <h1>Londres</h1>
+            <p>Londres é a capital da Ingraterra.</p>
+        </article>
+    </section>
 
-        <script>
-            function myFunction(){
-                const demoElement = document.getElementById("demo");
-                demoElement.style.fontSize = "25px";
-                demoElement.style.color = "red";
-                demoElement.style.backgroundColor = "yellow";
-                demoElement.style.border = "none";
-            }
-            function anotherFunction(){
-                const demoElement = document.getElementById("demo");
-                demoElement.style.fontSize = "32px";
-                demoElement.style.color = "rgb(108,250,26)";
-                demoElement.style.backgroundColor = black;
-                demoElement.style.border = "none";
-            }
-            function otherFunction(){
-                const demoElement = document.getElementById("demo");
-                demoElement.style.fontSize = "40px";
-                demoElement.style.color = "rgb(255, 75, 255)";
-                demoElement.style.backgroundColor = "yellow";
-                demoElement.style.border = "2px solid black";
-            }
-        </script>
-
-        <button type="button" onclick="myFunction()">Click Me!</button>
-        <button type="button" onclick="anotherFunction()">Chance everything!</button>
-        <button type="button" onclick="otherFunction()">Chance again!</button>
+    <footer>
+        <p>Footer</p>
+    </footer>
 
 </body>
 </html>
