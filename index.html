@@ -28,8 +28,12 @@
 
         if(age >= 18){
             resultParagraph.innerHTML = "Você é **maior de idade**.";
+        }else if(age >=16){
+            resultParagraph.innerHTML = "Você é adolescente!";
+        }else if(age >=12){
+            resultParagraph.innerHTML = "Você é pré adolescente!";
         }else{
-            resultParagraph.innerHTML = "Você é **menor de idade**.";
+            resultParagraph.innerHTML = "Você é criança!";
         }
         ageInput.value = '';
     }
