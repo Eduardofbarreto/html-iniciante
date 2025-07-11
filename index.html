@@ -9,29 +9,32 @@
 
     <h1>Testando!</h1>
 
-    <p>Clique no botão para pegar suas coordenadas!</p>
+    <label for="inputAge">Idade: </label><br>
+    <input type="number" id="inputAge">
+    <br><br>
 
-    <button onclick="getLocation()">Tente!</button>
+    <button type="button" onclick="checkAge()">Ver idade!</button>
 
-    <p id="demo"></p>
+    <p id="resultMessage"></p>
 
 <script>
-    const x = document.getElementById("demo");
 
-    function getLocation(){
-        if(navigator.geolocation){
-            navigator.geolocation.getCurrentPosition(success, error);
+    function checkAge(){
+        const ageInput = document.getElementById("inputAge");
+        let age = ageInput.value;
+        age = parseInt(age);
+
+        const resultParagraph = document.getElementById("resultMessage");
+
+        if(age >= 18){
+            resultParagraph.innerHTML = "Você é **maior de idade**.";
         }else{
-            x.innerHTML = "Localização não suportada pelo navegador!";
+            resultParagraph.innerHTML = "Você é **menor de idade**.";
         }
-    }
-    function success(position){
-        x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+        ageInput.value = '';
     }
 
-    function error(){
-        alert("Desculpe, sem posição válida!");
-    }
+
 </script>
 
 </body>
