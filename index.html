@@ -1,25 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){$("button").click(function(){
-            $("#div1").fadeIn();
-            $("#div2").fadeIn("Slow");
-            $("#div3").fadeIn(3000);
-        });
-    });
-    </script>
 </head>
 <body>
-    <p>Demonstrando o fadeIn() com diferentes parametros.</p>
-    <button>Clicar para ver fadeIn</button><br><br>
+    <h2>O que posso fazer com JavaScript!</h2>
 
-    <div id="div1" style="width:80px; height:80px;display:none;background-color:red;"></div>
-    <div id="div2" style="width: 80px; height:80px; display:none; background-color:green;"></div>
-    <div id="div3" style="width: 80px; height:80px; display:none; background-color:blue"></div>
+    <p id="demo">JS pode esconder e mostrar elementos!</p>
+
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">Clique aqui!</button>
+    <br>
+    <button type="button" onclick="document.getElementaryByIr('demo').style.color='red'">Clique aquiiiii!!</button>   
+
 </body>
 </html>
