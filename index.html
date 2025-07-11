@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>testes!!</title>
 </head>
 <body>
 
-    <h1>Teste@!</h1>
-    
-<p id="xValue"></p>
-<p id="yValue"></p>
-<p id="somaValue"></p>
+    <h1>Testando!</h1>
 
-<script>
-    
-    let x = 3;
-    let y = 2;
-    let soma = x + y;
+        <div class="form">
+            <label for="userNameInput">Nome: </label><br>
+            <input type="text" id="userNameInput">
+        </div>
 
-    document.getElementById("xValue").innerHTML = "x: " + x;
-    document.getElementById("yValue").innerText = "y: " + y;
-    document.getElementById("somaValue").innerText = "Soma: " + soma;
+    <br>
+    <button type="button" onclick="displayUserName()">Clique!</button>
 
-</script>
+    <p id="displayUserName"></p>
+
+    <script>
+        function displayUserName(){
+            const nameInput = document.getElementById("userNameInput");
+
+            const userName = nameInput.value;
+
+            const paragraphForName = document.getElementById("displayUserName");
+
+            paragraphForName.innerHTML = "Olá, " + userName + "!";
+        }
+    </script>
 
 </body>
 </html>
