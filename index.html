@@ -10,24 +10,26 @@
     <h1>Testando!</h1>
 
         <div class="form">
-            <label for="userNameInput">Nome: </label><br>
-            <input type="text" id="userNameInput">
+            <label for="colorInput">Qual sua cor favorita? </label><br>
+            <input type="text" id="colorInput">
         </div>
 
     <br>
-    <button type="button" onclick="displayUserName()">Clique!</button>
+    <button type="button" onclick="displayColor()">Clique!</button>
 
-    <p id="displayUserName"></p>
+    <p id="colorMessage"></p>
+    <div id="colorSquare" style="width: 100px; height:100px; border:1px solid black;"></div>
 
     <script>
-        function displayUserName(){
-            const nameInput = document.getElementById("userNameInput");
+        function displayColor(){
+            const colorInputField = document.getElementById("colorInput");
+            const favoriteColor = colorInputField.value;
+            const squareElement = document.getElementById("colorSquare");
+            const messageParagraph = document.getElementById("colorMessage");
 
-            const userName = nameInput.value;
+            squareElement.style.backgroundColor = favoriteColor.toLowerCase();
 
-            const paragraphForName = document.getElementById("displayUserName");
-
-            paragraphForName.innerHTML = "Olá, " + userName + "!";
+            messageParagraph.innerHTML = `Sua cor favorita, ${favoriteColor}, agora está no quadrado!`;
         }
     </script>
 
