@@ -1,50 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="imagens/proxy-image.ico">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somador de Números</title> </head>
-<body>
-
-<h2>Somar dois números!</h2>
-
-    <div class="input-group">
-        <label for="num1">Número 1: </label>
-        <input type="number" id="num1" placeholder="Digite o primeiro número: ">
-    </div>
-
-    <div class="input-group">
-        <label for="num2">Número 2: </label>
-        <input type="number" id="num2" placeholder="Digite o segundo número: ">
-    </div>
-
-    <button onclick="somarNumeros()">Somar</button>
-
-    <h3>Resultado: <span id="resultado"></span></h3>
-
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        function somarNumeros(){
-            const inputNumero1 = document.getElementById("num1");
-            const numero1 = parseFloat(inputNumero1.value);
-
-            const inputNumero2 = document.getElementById("num2");
-            const numero2 = parseFloat(inputNumero2.value);
-
-            // Adicione esta linha para pegar o elemento do resultado
-            const spanResultado = document.getElementById("resultado");
-
-            if(isNaN(numero1) || isNaN(numero2)){
-                spanResultado.textContent = "Por favor, digite números válidos!";
-                spanResultado.style.color = "red";
-            } else {
-                const soma = numero1 + numero2;
-                spanResultado.textContent = soma;
-                spanResultado.style.color = "green";
-            }
-        }
+        $(document).ready(function(){$("button").click(function(){
+            $("#div1").fadeIn();
+            $("#div2").fadeIn("Slow");
+            $("#div3").fadeIn(3000);
+        });
+    });
     </script>
+</head>
+<body>
+    <p>Demonstrando o fadeIn() com diferentes parametros.</p>
+    <button>Clicar para ver fadeIn</button><br><br>
 
+    <div id="div1" style="width:80px; height:80px;display:none;background-color:red;"></div>
+    <div id="div2" style="width: 80px; height:80px; display:none; background-color:green;"></div>
+    <div id="div3" style="width: 80px; height:80px; display:none; background-color:blue"></div>
 </body>
 </html>

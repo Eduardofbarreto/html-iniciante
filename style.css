@@ -1,18 +1,8 @@
 body{
     background-color: rgb(204, 203, 203);
-}
-h1{
-    font-size: 1vw;
+
 }
 
-.form{
-    font-style: italic;
-    color:rgb(2, 0, 8);
-    padding: 10px;
-    width: fit-content;
-}
-
-
-.form input{
-    background-color: rgb(207, 243, 240);
+.input-group{
+    color: red;
 }
