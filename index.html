@@ -9,29 +9,30 @@
 
     <h1>Testando!</h1>
 
-        <div class="form">
-            <label for="colorInput">Qual sua cor favorita? </label><br>
-            <input type="text" id="colorInput">
-        </div>
+    <p>Clique no botão para pegar suas coordenadas!</p>
 
-    <br>
-    <button type="button" onclick="displayColor()">Clique!</button>
+    <button onclick="getLocation()">Tente!</button>
 
-    <p id="colorMessage"></p>
-    <div id="colorSquare" style="width: 100px; height:100px; border:1px solid black;"></div>
+    <p id="demo"></p>
 
-    <script>
-        function displayColor(){
-            const colorInputField = document.getElementById("colorInput");
-            const favoriteColor = colorInputField.value;
-            const squareElement = document.getElementById("colorSquare");
-            const messageParagraph = document.getElementById("colorMessage");
+<script>
+    const x = document.getElementById("demo");
 
-            squareElement.style.backgroundColor = favoriteColor.toLowerCase();
-
-            messageParagraph.innerHTML = `Sua cor favorita, ${favoriteColor}, agora está no quadrado!`;
+    function getLocation(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(success, error);
+        }else{
+            x.innerHTML = "Localização não suportada pelo navegador!";
         }
-    </script>
+    }
+    function success(position){
+        x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+    }
+
+    function error(){
+        alert("Desculpe, sem posição válida!");
+    }
+</script>
 
 </body>
 </html>
