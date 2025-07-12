@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Document</title>
 </head>
 <body>
@@ -21,5 +22,45 @@
 <script src="script.js" defer></script>
 
 
+=======
+    <title>testes!!</title>
+</head>
+<body>
+
+    <h1>Testando!</h1>
+
+    <label for="inputAge">Idade: </label><br>
+    <input type="number" id="inputAge">
+    <br><br>
+
+    <button type="button" onclick="checkAge()">Ver idade!</button>
+
+    <p id="resultMessage"></p>
+
+<script>
+
+    function checkAge(){
+        const ageInput = document.getElementById("inputAge");
+        let age = ageInput.value;
+        age = parseInt(age);
+
+        const resultParagraph = document.getElementById("resultMessage");
+
+        if(age >= 18){
+            resultParagraph.innerHTML = "Você é **maior de idade**.";
+        }else if(age >=16){
+            resultParagraph.innerHTML = "Você é adolescente!";
+        }else if(age >=12){
+            resultParagraph.innerHTML = "Você é pré adolescente!";
+        }else{
+            resultParagraph.innerHTML = "Você é criança!";
+        }
+        ageInput.value = '';
+    }
+
+
+</script>
+
+>>>>>>> 771f057b7ffee36d9fa99cdca4e914f9213474a6
 </body>
 </html>
