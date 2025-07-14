@@ -3,64 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
 
-<h1>Advinhe o número secreto!</h1>
-<p>Estou pensando em um número entre 1 e 10.</p>
+<h1>Bem-vindos ao meu site!</h1>
 
-<input type="number" id="inputPalpite" placeholder="Digite seu palpite: ">
+<img src="imagens/Amazon-Logo-1.png" alt="logo_amazon" width="80px" height="100px">
 
-<button id="btnVerificar">Verificar</button>
+<p>Aqui você encontrará de tudo um pouco!</p>
 
-<p id="resultado"></p>
+<div class="tabela1">
+    <table>
+        <thead>
+            <tr>
+                <th>Teste</th>
+                <th>teste</th>
+                <th>teste</th>
+            </tr>
+        </thead>
+            <tr>
+                <td><img class="images" src="imagens/dog.jpg" alt="dog"></td>
+                <td><img class="images" src="imagens/dog1.jpg" alt="dog1"></td>
+                <td><img class="images" src="imagens/dog2.jpg" alt="dog2"></td>
+            </tr>
+            <tr>
+                <td><img class="images" src="imagens/fsad.avif" alt=""></td>
+                <td><img class="images" src="imagens/gas0.jpg" alt=""></td>
+                <td><img class="images" src="imagens/gasd.webp" alt=""></td>
+            </tr>
+    </table>
+</div>
 
-<p>TESTEEEEEEEEEEEEE!!!</p>
+<img src="imagens/logo-amazon-4096.png" alt="" width="80px" height="80px">
 
-<script src="script.js" defer></script>
-
-
-=======
-    <title>testes!!</title>
-</head>
-<body>
-
-    <h1>Testando!</h1>
-
-    <label for="inputAge">Idade: </label><br>
-    <input type="number" id="inputAge">
-    <br><br>
-
-    <button type="button" onclick="checkAge()">Ver idade!</button>
-
-    <p id="resultMessage"></p>
-
-<script>
-
-    function checkAge(){
-        const ageInput = document.getElementById("inputAge");
-        let age = ageInput.value;
-        age = parseInt(age);
-
-        const resultParagraph = document.getElementById("resultMessage");
-
-        if(age >= 18){
-            resultParagraph.innerHTML = "Você é **maior de idade**.";
-        }else if(age >=16){
-            resultParagraph.innerHTML = "Você é adolescente!";
-        }else if(age >=12){
-            resultParagraph.innerHTML = "Você é pré adolescente!";
-        }else{
-            resultParagraph.innerHTML = "Você é criança!";
-        }
-        ageInput.value = '';
-    }
-
-
-</script>
-
->>>>>>> 771f057b7ffee36d9fa99cdca4e914f9213474a6
 </body>
 </html>
