@@ -1,3 +1,23 @@
 body{
     background-color: tomato;
 }
+
+.caixas{
+    
+}
+
+.caixa{
+    border:2px solid red;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    float:left;
+    margin-left: 10px;
+}
+
+/* Sem display flex eu usaria text-align center 
+e line heigh (tamanho da forma!) */
