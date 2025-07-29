@@ -2,9 +2,6 @@ body{
     background-color: tomato;
 }
 
-.caixas{
-    
-}
 
 .caixa{
     border:2px solid red;
@@ -21,3 +18,7 @@ body{
 
 /* Sem display flex eu usaria text-align center 
 e line heigh (tamanho da forma!) */
+
+.clear{
+    clear: both;
+}
