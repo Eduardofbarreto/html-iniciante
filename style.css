@@ -1,24 +1,41 @@
 body{
-    background-color: tomato;
+    background-color: rgb(247, 133, 113);
+    max-width: 100%;
 }
 
+h1{
+    height: 150px;
+    width: 350px;
+    border:1px solid black;
+    text-align: center;
+    line-height: 150px;
+}
 
-.caixa{
-    border:2px solid red;
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
+h2{
+    height: 200px;
+    width: 400px;
     display: flex;
+    border:1px solid black;
     justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    float:left;
-    margin-left: 10px;
+    text-align: center;
+    float: right;
+}
+h3{
+    border:1px solid black;
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    line-height: 500px;
+    background-image: url(imagens/alimento_special_dog_premium_pro_para_cachorro_adulto_todos_os_tamanhos_sabor_vegetais_em_saco_de_15_139_1_055e0a376d2d6d6f2e005a8d17e64f70.webp);
 }
 
-/* Sem display flex eu usaria text-align center 
-e line heigh (tamanho da forma!) */
-
-.clear{
-    clear: both;
+h4{
+    border:2px solid black;
+    width: 350px;
+    height: 350px;
+    border-radius: 50px;
+    box-shadow: 0px 10px 5px rgba(0,0,0,0.5);
+    text-align: center;
+    line-height: 350px;
+    font-size: 2rem;
 }
