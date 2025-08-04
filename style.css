@@ -1,24 +1,23 @@
 body{
-    background-color: wheat;
+    background-color: #007fc7;
 }
 
-.search-bar{
-    display: flex;
-    align-items: center;
-    border:1px solid #ccc;
-    border-radius:5px;
-    width: 400px;
-    height: 40px;
+#container{
+    background-color: #fff;
+    width: 800px;
+    margin: 10px auto;
+    padding: 10px;
 }
 
-.search-bar button{
-    background-color: #ff9900;
-    color: white;
-    border: none;
-    padding: 0 15px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer; /* <-- Adicione o ponto e vírgula aqui */
-    height: 100%;
-    font-size: 14px;
-    font-weight: bold;
+h1{
+    
+}
+
+p{
+    width: 300px;
+}
+
+.relative{
+    border:1px solid red;
+    position: relative;
 }
