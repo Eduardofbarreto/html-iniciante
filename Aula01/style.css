@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+}
+
+h1, h2, h3{
+    color: green;
+    font-size: 32px;
+    font-family: 'Comic Sans';
+}
+
+p{
+    color:blueviolet;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+.destaque{
+    color:black;
+    background-color: yellow;
+    font-style: italic;
+}
+
+img{
+    cursor: pointer;
+    border:2px solid white;
+}
+
+button{
+    font-size: 22px;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border:none;
+    cursor:pointer;
+}
