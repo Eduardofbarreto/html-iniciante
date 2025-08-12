@@ -15,8 +15,14 @@ body{
 }
 
 .imagens img{
-    width: 250px;
+    width: 240px;
     height: 160px;
     border:1px solid black;
     margin: 3px;
+}
+
+.produtos{
+    text-align: center;
+    border:1px solid black;
+    padding: 1px;
 }
