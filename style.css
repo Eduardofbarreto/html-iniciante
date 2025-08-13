@@ -1,28 +1,86 @@
 body{
     background-color: rgb(230, 188, 99);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding:20px;
+}
+
+.principal{
+    font-size:1.5rem;
+    text-align: center;
+    color:#333;
+    margin-bottom: 20px;
 }
 
 .titulo{
     font-size: 1.2rem;
     text-align: center;
+    color:#333;
+    margin-bottom: 20px;
+}
+
+.titulo h3{
+    font-size: 1.3rem;
+    color:#666;
+    font-weight: normal;
 }
 
 .imagens{
-    border:1px solid black;
+    border:none;
     display: flex;
-    gap:12px;
-    padding:5px 5px;
+    gap:20px;
+    padding:15px;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 
-.imagens img{
-    width: 240px;
-    height: 160px;
-    border:1px solid black;
-    margin: 3px;
-}
+
 
 .produtos{
     text-align: center;
-    border:1px solid black;
-    padding: 1px;
+    border:1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+    cursor: pointer;
+    background-color: #fff;
+    width: 260px;
+    box-sizing: border-box;
+}
+
+.produtos:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.produtos img{
+    width: 100%;
+    height: auto;
+    border:none;
+    margin:0;
+    border-radius: 6px;
+}
+
+.produtos p{
+    margin:10px 0 0;
+    color:#555;
+}
+
+.produtos p:last-child{
+    font-weight: bold;
+    color:#007bff;
+    font-size: 1.1rem;
+    margin-top:5px;
+}
+
+h3{
+    font-size: 1.8rem;
+    color:#333;
+    text-align: center;
+    margin-top:40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
 }
