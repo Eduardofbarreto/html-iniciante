@@ -1,0 +1,27 @@
+body{
+    font-family: Google sans code;
+}
+
+.grupo{
+    border:2px solid#000;
+}
+
+/* valor abosoluto */
+.pixel{
+    width: 500px;
+}
+
+/* valor de acordo com o pai */
+.porcentagem{
+    width: 27%;
+}
+
+/* valor de acordo com o tamanho da tela */
+.viewportwidth{
+    width: 58vw;
+}
+
+/* valor de acordo com o tamanho da tela */
+.viewportheight{
+    height: 15vh;
+}
