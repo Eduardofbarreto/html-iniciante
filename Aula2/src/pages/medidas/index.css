@@ -25,3 +25,14 @@ body{
 .viewportheight{
     height: 15vh;
 }
+
+/* 1em = 16px */
+.em{
+    font-size: 1.5em;
+}
+/* o EM leva e aumenta ou diminui o valor para a classe filho */
+
+
+.rem{
+    font-size: 2rem;
+}
