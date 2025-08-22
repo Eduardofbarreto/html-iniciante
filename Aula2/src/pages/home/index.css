@@ -5,3 +5,20 @@ body{
 h1{
     font-family: Google sans code;
 }
+
+p{
+    font-size: 20px;
+    font-weight: 300;
+    font-style:italic;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 20px #e53b3b;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+a{
+    font: 400 22px/24px 'Montserrat';
+}
