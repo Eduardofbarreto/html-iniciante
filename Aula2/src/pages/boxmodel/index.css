@@ -3,6 +3,15 @@ body{
 }
 
 .botao-top{
-    border:2px solid #000;
-    
+    font-size: 22px;
+    /* border:2px solid #000; */
+    border:none;
+    padding: 10px 20px;
+    background-color: #4778ff;
+    color:#fff;
+    border-radius: 30px;
+    margin:8px;
+    width: 200px;
+    height: 200px;
+
 }
