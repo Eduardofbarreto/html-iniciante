@@ -22,3 +22,11 @@ body{
     padding: 10px;
 
 }
+
+.filho{
+    flex-grow: 1;
+}
+
+.filho2{
+    flex-grow: 1;
+}
