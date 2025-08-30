@@ -4,10 +4,11 @@ body{
 
 .container{
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     gap:10px;
     background-color: blueviolet;
     height: 500px;
+    justify-content: space-between;
 }
 
 .container p{
