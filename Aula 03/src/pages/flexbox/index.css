@@ -8,9 +8,10 @@ body{
     gap:10px;
     background-color: blueviolet;
     height: 500px;
-    justify-content: space-evenly;
+    justify-content:center;
     align-items: center;
-    text-align: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .container p{
