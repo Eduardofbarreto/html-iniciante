@@ -5,3 +5,11 @@ body{
     background-origin: padding-box;
     background-size: 300px;
 }
+
+h1{
+    font-family: 'Comic Relief';
+}
+
+.form-group label{
+    text-align: center;
+}

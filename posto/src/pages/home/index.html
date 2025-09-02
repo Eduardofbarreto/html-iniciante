@@ -15,7 +15,8 @@
         </div>
         <div class="form-group">
             <form action="/src/pages/home/abastecer.php" method="post">
-                <label for="combustivel">Combustível usado:</label>
+
+                <label for="combustivel">Combustível usado:</label><br>
                 <select name="combustivel" id="combustivel">
                     <option value="gasolina">Gasolina</option>
                     <option value="gasolina_adt">Gasolina Aditivada</option>
@@ -24,7 +25,7 @@
                     <option value="diesels10">Diesel S10</option>
                     <option value="gas">Gás</option>
                 </select><br><br>
-                <label for="litro">Litros:</label>
+                <label for="litro">Litros:</label><br>
                 <input type="number" id="litro" name="litro" step="0.01" min="0">
                 <br><br>
                 <button type="submit">Calcular</button>
