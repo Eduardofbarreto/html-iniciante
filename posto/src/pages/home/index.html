@@ -14,10 +14,11 @@
             <h1>Sistema de abastecimento!</h1>
         </div>
         <div class="form-group">
-            <form action="/src/pages/php/abastecer.php" method="post">
+            <form action="/src/pages/home/abastecer.php" method="post">
                 <label for="combustivel">Combustível usado:</label>
                 <select name="combustivel" id="combustivel">
                     <option value="gasolina">Gasolina</option>
+                    <option value="gasolina_adt">Gasolina Aditivada</option>
                     <option value="etanol">Etanol</option>
                     <option value="diesel">Diesel Comum</option>
                     <option value="diesels10">Diesel S10</option>
@@ -28,7 +29,7 @@
                 <br>
                 <label for="valor">Valor:</label>
                 <input type="valor" step="0.01" min="0">
-
+                <br><br>
                 <button type="submit">Calcular</button>
             </form>
         </div>
