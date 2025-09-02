@@ -1,3 +1,7 @@
 body{
     background-color: rgb(74, 74, 172);
+    background-image: url(/public/assets/images/Logos-de-empresas-55-1024x538.png);
+    background-repeat:inherit;
+    background-origin: padding-box;
+    background-size: 300px;
 }
