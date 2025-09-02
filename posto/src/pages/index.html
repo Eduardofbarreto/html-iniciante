@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/fonts.css">
+    <link rel="stylesheet" href="/public/css/global.css">
+    <link rel="stylesheet" href="/src/pages/index.css">
+    <title>Posto Ande Bem</title>
+</head>
+<body>
+    <div class="container">
+        <div class="titulo">
+            <h1>Sistema de abastecimento!</h1>
+        </div>
+        <div class="form-group">
+            <form action="abastecer.php" method="post">
+                <label for="combustivel">Combustível usado:</label>
+                <select name="combustivel" id="combustivel">
+                    <option value="gasolina">Gasolina</option>
+                    <option value="etanol">Etanol</option>
+                    <option value="diesel">Diesel Comum</option>
+                    <option value="diesels10">Diesel S10</option>
+                    <option value="gas">Gás</option>
+                </select><br><br>
+                <label for="litro">Litros:</label>
+                <input type="number" id="litro" name="litro">
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
