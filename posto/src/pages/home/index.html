@@ -14,7 +14,7 @@
             <h1>Sistema de abastecimento!</h1>
         </div>
         <div class="form-group">
-            <form action="abastecer.php" method="post">
+            <form action="/src/pages/php/abastecer.php" method="post">
                 <label for="combustivel">Combustível usado:</label>
                 <select name="combustivel" id="combustivel">
                     <option value="gasolina">Gasolina</option>
@@ -25,7 +25,11 @@
                 </select><br><br>
                 <label for="litro">Litros:</label>
                 <input type="number" id="litro" name="litro">
+                <br>
+                <label for="valor">Valor:</label>
+                <input type="valor" step="0.01" min="0">
 
+                <button type="submit">Calcular</button>
             </form>
         </div>
     </div>
