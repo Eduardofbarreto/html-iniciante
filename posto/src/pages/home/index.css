@@ -4,6 +4,7 @@ body{
     background-repeat:inherit;
     background-origin: padding-box;
     background-size: 300px;
+    background-blend-mode: multiply;
 }
 
 h1{
