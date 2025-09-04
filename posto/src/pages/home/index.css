@@ -1,10 +1,11 @@
 body{
     background-color: rgb(74, 74, 172);
     background-image: url(/public/assets/images/Logos-de-empresas-55-1024x538.png);
-    background-repeat:inherit;
+    background-repeat:no-repeat;
     background-origin: padding-box;
-    background-size: 300px;
-    background-blend-mode: multiply;
+    background-size: 600px;
+    background-blend-mode:exclusion;
+    background-position:500px;
 }
 
 h1{
