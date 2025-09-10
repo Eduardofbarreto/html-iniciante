@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salvar no banco!</title>
+    <title>Salvar e filtrar dados!</title>
 </head>
 <body>
     
@@ -20,6 +20,15 @@
 
             <button type="submit">Cadastrar</button>
 
+        </form>
+
+        <hr>
+
+        <h2>Buscar Pessoas</h2>
+        <form action="index.php" method="get">
+            <label for="text" id="filtro_nome" name="filtro_nome"
+            placeholder="Digite uma letra ou nome"></label>
+            <button type="submit">Buscar</button>
         </form>
 
         <hr>
