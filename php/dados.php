@@ -1,81 +1,74 @@
 <?php
 // Bloco PHP no topo do arquivo para processar dados e consultas
-$host = "localhost";
+$servername = "localhost";
 $dbname = "postgres";
-$user = "postgres";
+$username = "postgres";
 $password = "root";
 
 try {
-    $dsn = "pgsql:host=$host;dbname=$dbname";
-    $pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    // Conecta usando PDO para PostgreSQL
+    $conn = new PDO("pgsql:host=$servername;dbname=$dbname", $username, $password);
+    // Define o modo de erro para lançar exceções em caso de falha
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Falha na conexão com o banco de dados: " . $e->getMessage());
+}
 
-    // Processa a inserção se o formulário for enviado
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nome = $_POST['nome'];
-        $data_nascimento = $_POST['data_nascimento'];
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $nome = $_POST['nome'];
+    $data_nascimento = $_POST['data_nascimento'];
 
-        $sql = "INSERT INTO pessoas (nome, data_nascimento) VALUES (:nome, :data_nascimento)";
-        
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':nome', $nome);
-        $stmt->bindParam(':data_nascimento', $data_nascimento);
-        $stmt->execute();
+    $stmt = $conn->prepare("INSERT INTO pessoas (nome, data_nascimento) VALUES (?, ?)");
+    $stmt->bindParam(1, $nome);
+    $stmt->bindParam(2, $data_nascimento);
+
+    if($stmt->execute()){
+        header("Location: index.php");
+        exit();
+    } else {
+        echo "Erro: " . $stmt->errorInfo()[2];
+    }
+    $stmt->closeCursor(); // Em PDO, use closeCursor() em vez de close()
+}
+
+function buscarPessoas($filtro = ''){
+    global $conn;
+    $pessoas = [];
+
+    $sql = "SELECT id, nome, data_nascimento FROM pessoas";
+
+    if(!empty($filtro)){
+        $sql .= " WHERE nome LIKE ?";
+    }
+    $sql .= " ORDER BY nome";
+
+    $stmt = $conn->prepare($sql);
+    if(!empty($filtro)){
+        $param_filtro = "%" . $filtro . "%";
+        $stmt->bindParam(1, $param_filtro);
     }
 
-    // Busca os dados do banco de dados para a tabela
-    $sql_select = "SELECT id, nome, data_nascimento FROM pessoas ORDER BY id DESC";
-    $stmt_select = $pdo->prepare($sql_select);
-    $stmt_select->execute();
-    $pessoas = $stmt_select->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-} catch (PDOException $e) {
-    // Exibe o erro de forma segura
-    echo "Erro ao conectar ou inserir dados: " . $e->getMessage();
+    if (count($result) > 0) {
+        $pessoas = $result;
+    }
+
+    $stmt->closeCursor();
+    return $pessoas;
 }
+
+function calcularIdadeCompleta($dataNascimento){
+    $data_nasc = new DateTime($dataNascimento);
+    $hoje = new DateTime();
+    $diferenca = $hoje->diff($data_nasc);
+
+    $anos = $diferenca->y;
+    $meses = $diferenca->m;
+    $dias = $diferenca->d;
+
+    return "$anos anos, $meses meses e $dias dias";
+}
+
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salvar no banco!</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Salvar informações no banco!</h1>
-        
-        <form action="dados.php" method="post">
-            <label for="nome">Digite seu nome:</label>
-            <input type="text" id="nome" name="nome"><br><br>
-
-            <label for="data">Data de nascimento:</label>
-            <input type="date" id="data_nascimento" name="data_nascimento" required><br><br>
-
-            <button type="submit">Cadastrar</button>
-        </form>
-
-        <hr>
-
-        <h1>Pessoas Cadastradas</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Data de nascimento</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($pessoas as $pessoa): ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($pessoa['id']); ?></td>
-                        <td><?php echo htmlspecialchars($pessoa['nome']); ?></td>
-                        <td><?php echo htmlspecialchars($pessoa['data_nascimento']); ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
