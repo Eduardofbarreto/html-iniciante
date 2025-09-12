@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else {
         echo "Erro ao cadastrar!";
     }
-    $stmt->closeCursor(); // Em PDO, use closeCursor() em vez de close()
+    $stmt->closeCursor(); 
 }
 
 function buscarPessoas($filtro = ''){
