@@ -3,46 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com Flexbox</title>
     <link rel="stylesheet" href="style.css">
-    <title>Prática PHP</title>
 </head>
-<body class="conteudo">
-    
+<body>
+
     <header>
-        <article>
-            <h1>Aqui chegou seu momento!!</h1>
-            <h2>Vamos fazer cálculos?</h2>
-        </article>
+        <h1>Meu Site com Flexbox</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
     </header>
 
     <main>
-        <form action="processa.php" method="get">
-
-            <h3>Vamos digitar os números?</h3>
-            <br>
-            <label for="num1">Digite o número 1:</label>
-            <input type="number" id="num1" name="num1">
-            <br><br>
-            <label for="num2">Digite o número 2:</label>
-            <input type="number" id="num2" name="num2">
-            <br><br>
-            <button type="submit">Calcular!</button>
-
-        </form>
+        <section>
+            <h2>Bem-vindo à Página</h2>
+            <p>Este é o conteúdo principal. Preencha com bastante texto para testar o layout.</p>
+            <p>Este é um segundo parágrafo para garantir que haja conteúdo suficiente para preencher o espaço. Ele servirá para que o nosso footer permaneça no final da página, independentemente da quantidade de conteúdo.</p>
+        </section>
     </main>
 
-    <footer>
-        Feito e linceaciado por: Eduardo F. Barreto
-        &copy;
-        <p id="data-atual"></p>
+    <footer class="rodape">
+        <p>Feito e lincenciado por Eduardo F. Barreto</p>
+        <p>Copyright © 2025</p>
     </footer>
-
-    <script>
-        var hoje = new Date();
-        var dataCompleta = hoje.toDateString();
-        var elemento = document.getElementById("data-atual");
-        elemento.innerHTML = dataCompleta;
-    </script>
 
 </body>
 </html>
