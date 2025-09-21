@@ -36,3 +36,28 @@ footer{
     background-color: silver;
     text-align: center;
 }
+
+h1, h2, h3{
+    position: relative;
+    color:white;
+    z-index: 2;
+}
+
+form label{
+    position: relative;
+    color: white;
+    z-index: 2;
+}
+
+form button{
+    position: relative;
+    color: white;
+    z-index: 2;
+    background-color: black;
+}
+
+form input{
+    position: relative;
+    color: white;
+    z-index: 2;
+}
